@@ -1,0 +1,4 @@
+<div *ngIf="Selecteduser">List OF Users! {{Selecteduser.UserId}}</div>  
+ 
+<app-user *ngFor="let user of users;trackBy:trackUser"
+[user]="user"  (userSelected)="OnSelectedUserClick($event)"></app-user>

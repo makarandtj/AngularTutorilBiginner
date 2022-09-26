@@ -1,0 +1,31 @@
+ 
+<div class="container My-5"> </div>
+<h1 class="mb-3">
+    
+    <a [routerLink]="['/AddEmployee/']">Add Employee</a>
+         
+</h1>
+<table class="table" *ngIf="EmployeeList">
+    <tr>
+    <th>id </th>
+    <th>Name </th>
+    <th>Salary</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>department</th>
+    <th>Edit Employee</th>
+    </tr>
+    <tr *ngFor="let emp  of EmployeeList">
+
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.department}}</td>
+        <td>
+            <a [routerLink]="['/EditEmployee','edit',emp.id]">View</a>
+        </td>
+        </tr>
+</table>
+<p *ngIf="!EmployeeList">No Employee Found</p>

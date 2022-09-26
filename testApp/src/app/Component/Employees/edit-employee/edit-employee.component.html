@@ -1,0 +1,48 @@
+ <div class="container my-5"> 
+    <h1 class="mb-3">
+ Edit Employee   
+    </h1>
+    <form #form="ngForm" (ngSubmit)="UpdateEmployee()" >
+        <div class="row mb-3">
+            <label for="id" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" id="id" name="id" [(ngModel)]="editEmployeeRequest.id">
+            </div>
+          </div>
+          
+        <div class="row mb-3">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="editEmployeeRequest.name">
+          </div>
+        </div>
+        <div> 
+        <label for="email" class="col-sm-2 col-form-label">email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="editEmployeeRequest.email">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="department" class="col-sm-2 col-form-label">Department</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="department" name="department" [(ngModel)]="editEmployeeRequest.department">
+          </div>
+        </div>
+          <div class="row mb-3">
+            <label for="salary" class="col-sm-2 col-form-label">Salay</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="salary" name="salary" [(ngModel)]="editEmployeeRequest.salary">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="phone" name="phone" [(ngModel)]="editEmployeeRequest.phone">
+            </div>
+          </div>
+        <div class="row mb-3">
+        
+        </div>
+        <button type="submit"   class="btn btn-primary">Update Employee </button>
+      </form>
+    </div>

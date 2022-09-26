@@ -1,1 +1,1 @@
-print("demo examples  ")
+print("demo examples")
